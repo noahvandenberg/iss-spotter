@@ -6,10 +6,7 @@ fetchMyIP((error, ip) => {
     console.log("It didn't work!" , error);
     return;
   }
-  console.log('Returned IP:', ip)
-  fetchCoordsByIP(
-    ip,
-    (coords) => {console.log(coords);}
-  );
+  console.log('Returned IP:', ip);
+  fetchCoordsByIP(ip,coords => console.log(coords));
 });
 
